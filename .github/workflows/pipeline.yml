@@ -10,7 +10,7 @@ jobs:
   dockerbuild:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
+      - uses: actions/checkout@v4
       - name: build docker image
         run: docker build -t imagecap:1.0 . --file Dockerfile
       - run: echo "Docker build successfully"
@@ -19,7 +19,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v4
+      - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
