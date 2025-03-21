@@ -46,7 +46,7 @@ Before running the scripts, make sure you have the required dependencies install
 conda create --name imagecaption python=3.10.16 -y
 conda activate imagecaption
 
-# Install PyTorch with CUDA support
+# Install PyTorch with CUDA support (adjust based on your CUDA version)
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 
 # Install additional dependencies
@@ -92,6 +92,7 @@ To build the Docker image, run the following command:
 ```sh
 docker build -t imagecap:1.0 .
 ```
+Note: Adjust the CUDA-compatible install command for torch, torchvision, and torchaudio in the Dockerfile according to your available CUDA version.
 
 ## Training the Model using Docker
 
